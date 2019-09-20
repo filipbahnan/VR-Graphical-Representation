@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class node : MonoBehaviour
+public class Node : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isNodeAbstract;
+    public string parent;
+
+    public bool getisNodeAbstract()
     {
-        
+        return isNodeAbstract;
+    }
+    public void setisNodeAbstract(bool isNodeAbstract)
+    {
+        this.isNodeAbstract = isNodeAbstract;
     }
 
-    // Update is called once per frame
-    void Update()
+    public string getParent()
     {
-        
+        return parent;
+    }
+    public void setParent(string parent)
+    {
+        this.parent = parent;
     }
 }

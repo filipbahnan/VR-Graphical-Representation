@@ -1,0 +1,4 @@
+class,parent,abstract,,
+animal,,yes,,
+dog,animal,no,,
+cat,animal,no,,
