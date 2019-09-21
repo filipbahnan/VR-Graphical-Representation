@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    public bool isNodeAbstract;
+    private bool isNodeAbstract;
     private string parent;
-    public int amountOfChildren = 0;
+    private int amountOfChildren = 0;
 
     public bool getisNodeAbstract()
     {

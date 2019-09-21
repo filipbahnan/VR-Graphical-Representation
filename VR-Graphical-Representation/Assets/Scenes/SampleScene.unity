@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba38613290dabd4eba00a6ca6fb320b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3793138703503871880, guid: 30265f9a2858e3e4496ccb841b1f680b, type: 3}
+  prefab: {fileID: 3367792668612746648, guid: 1fc9e8387342f1e4691f36dc20a08b9f, type: 3}
   nodeSize: 1
   abstractMaterial: {fileID: 2100000, guid: ea2b3ccb155a2494e826611fe9f66a74, type: 2}
 --- !u!4 &858357959

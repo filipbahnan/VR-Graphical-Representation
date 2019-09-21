@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Spawn_nodes : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Spawn_nodes : MonoBehaviour
     {
         read();
         setNodes();
+        spawnLines();
     }
 
     void spawnNodes(string[] row)
@@ -22,6 +24,11 @@ public class Spawn_nodes : MonoBehaviour
         Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
         GameObject newObj = Instantiate(prefab, spawnPosition, Quaternion.identity);
         newObj.transform.localScale += new Vector3(nodeSize, nodeSize, nodeSize);
+        TextMesh[] textObject = newObj.GetComponentsInChildren<TextMesh>();
+        for (int i = 0; i < 6; i++)
+            textObject[i].text = row[0];
+
+
 
         newObj.AddComponent<Node>();
         newObj.name = row[0].Trim();
@@ -54,7 +61,6 @@ public class Spawn_nodes : MonoBehaviour
         {
             if (nodes[i].GetComponent<Node>().getisNodeAbstract() == true)
             {
-                Debug.Log("bajs");
                 int size = nodes[i].GetComponent<Node>().getAmountOfChildren();
                 nodes[i].transform.localScale += new Vector3(2*size, 2 * size, 2 * size);
                 nodes[i].GetComponent<Renderer>().material = abstractMaterial;
@@ -64,7 +70,24 @@ public class Spawn_nodes : MonoBehaviour
 
     void spawnLines()
     {
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            if (nodes[i].GetComponent<Node>().getParent() != "" && nodes.First(Node => Node.name == nodes[i].GetComponent<Node>().getParent()).GetComponent<Node>().getisNodeAbstract() != true) 
+            {
+                LineRenderer relation = nodes[i].AddComponent<LineRenderer>();
+                relation.material = new Material(Shader.Find("Sprites/Default"));
+                Vector3[] positions = new Vector3[2];
+                positions[0] = nodes[i].transform.position;
+                positions[1] = nodes.First(Node => Node.name == nodes[i].GetComponent<Node>().getParent()).transform.position;
 
+                relation.widthMultiplier = 0.2f;
+                relation.material = new Material(Shader.Find("Sprites/Default"));
+                relation.SetPositions(positions);
+
+            }
+            
+        }
+            
     }
 
     public void read()

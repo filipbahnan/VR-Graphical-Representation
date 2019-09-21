@@ -1,4 +1,6 @@
 class,parent,abstract
+father,,no
+son,father,no
 dog,animal,no
 cat,animal,no
 animal,,yes
