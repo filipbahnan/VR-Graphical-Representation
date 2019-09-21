@@ -1,4 +1,8 @@
-class,parent,abstract,,
-animal,,yes,,
-dog,animal,no,,
-cat,animal,no,,
+class,parent,abstract
+dog,animal,no
+cat,animal,no
+animal,,yes
+vehicle,,yes
+penguin,animal,no
+car,vehicle,no
+boat,vehicle,no

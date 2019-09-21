@@ -5,7 +5,8 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public bool isNodeAbstract;
-    public string parent;
+    private string parent;
+    public int amountOfChildren = 0;
 
     public bool getisNodeAbstract()
     {
@@ -23,5 +24,14 @@ public class Node : MonoBehaviour
     public void setParent(string parent)
     {
         this.parent = parent;
+    }
+
+    public void addChild()
+    {
+        amountOfChildren++;
+    }
+    public int getAmountOfChildren()
+    {
+        return amountOfChildren;
     }
 }

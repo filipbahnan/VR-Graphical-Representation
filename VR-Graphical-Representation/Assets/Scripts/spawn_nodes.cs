@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Spawn_nodes : MonoBehaviour
 {
     public GameObject prefab;
     public float nodeSize;
-    private List<Node> nodes = new List<Node>();
+    private List<GameObject> nodes = new List<GameObject>();
+    public Material abstractMaterial;
 
     // Start is called before the first frame update
     void Start()
     {
         read();
+        setNodes();
     }
 
     void spawnNodes(string[] row)
@@ -21,10 +24,10 @@ public class Spawn_nodes : MonoBehaviour
         newObj.transform.localScale += new Vector3(nodeSize, nodeSize, nodeSize);
 
         newObj.AddComponent<Node>();
-        newObj.name = row[0];
-        newObj.GetComponent<Node>().setParent(row[1]);
+        newObj.name = row[0].Trim();
+        newObj.GetComponent<Node>().setParent(row[1].Trim());
 
-        if (row[2] == "yes")
+        if (row[2].Trim() == "yes")
         {
             newObj.GetComponent<Node>().setisNodeAbstract(true);
         }
@@ -33,6 +36,30 @@ public class Spawn_nodes : MonoBehaviour
             newObj.GetComponent<Node>().setisNodeAbstract(false);
         }
 
+        nodes.Add(newObj);
+
+    }
+
+    void setNodes()
+    {
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            if(nodes[i].GetComponent<Node>().getParent() != "")
+            {
+                GameObject theParent = nodes.First(Node => Node.name == nodes[i].GetComponent<Node>().getParent());
+                theParent.GetComponent<Node>().addChild();
+            }
+        }
+        for (int i = 0; i < nodes.Count; i++)
+        {
+            if (nodes[i].GetComponent<Node>().getisNodeAbstract() == true)
+            {
+                Debug.Log("bajs");
+                int size = nodes[i].GetComponent<Node>().getAmountOfChildren();
+                nodes[i].transform.localScale += new Vector3(2*size, 2 * size, 2 * size);
+                nodes[i].GetComponent<Renderer>().material = abstractMaterial;
+            }
+        }
     }
 
     void spawnLines()
