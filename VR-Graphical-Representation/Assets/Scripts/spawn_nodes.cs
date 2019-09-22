@@ -17,6 +17,7 @@ public class Spawn_nodes : MonoBehaviour
         read();
         setNodes();
         spawnLines();
+        positionNodes();
     }
 
     void spawnNodes(string[] row)
@@ -27,8 +28,6 @@ public class Spawn_nodes : MonoBehaviour
         TextMesh[] textObject = newObj.GetComponentsInChildren<TextMesh>();
         for (int i = 0; i < 6; i++)
             textObject[i].text = row[0];
-
-
 
         newObj.AddComponent<Node>();
         newObj.name = row[0].Trim();
@@ -44,6 +43,18 @@ public class Spawn_nodes : MonoBehaviour
         }
 
         nodes.Add(newObj);
+
+    }
+
+    void positionNodes()
+    {
+        int arraySize = 3;
+        bool[, ,] mapOfNodes = new bool[arraySize, arraySize, arraySize];
+
+        int x = Random.Range(0, arraySize - 1);
+        int y = Random.Range(0, arraySize - 1);
+        int z = Random.Range(0, arraySize - 1);
+
 
     }
 
