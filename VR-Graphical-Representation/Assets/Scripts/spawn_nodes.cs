@@ -90,12 +90,14 @@ public class Spawn_nodes : MonoBehaviour
                 LineRenderer relation = nodes[i].AddComponent<LineRenderer>();
                 relation.material = new Material(Shader.Find("Sprites/Default"));
                 Vector3[] positions = new Vector3[2];
-                positions[0] = nodes[i].transform.position;
+                //positions[0] = nodes[i].transform.position;
+                positions[0] = new Vector3(0,0,0);
                 positions[1] = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).transform.position;
-
+                Transform transformOfChild = nodes[i].transform;
+                positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
                 relation.widthMultiplier = 0.2f;
-                relation.material = new Material(Shader.Find("Sprites/Default"));
                 relation.SetPositions(positions);
+                relation.useWorldSpace = false;
 
             }
             
