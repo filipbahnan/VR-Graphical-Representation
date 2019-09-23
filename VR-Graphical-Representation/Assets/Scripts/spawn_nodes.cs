@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.UI;
+using System.IO;
+using Newtonsoft.Json;
 
 public class Spawn_nodes : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Spawn_nodes : MonoBehaviour
     public float nodeSize;
     private List<GameObject> nodes = new List<GameObject>();
     public Material abstractMaterial;
+    private string jsonString;
 
     // Start is called before the first frame update
     void Start()
@@ -20,26 +22,26 @@ public class Spawn_nodes : MonoBehaviour
         positionNodes();
     }
 
-    void spawnNodes(string[] row)
+    void spawnNodes(Node theNode)
     {
         Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
         GameObject newObj = Instantiate(prefab, spawnPosition, Quaternion.identity);
         newObj.transform.localScale += new Vector3(nodeSize, nodeSize, nodeSize);
         TextMesh[] textObject = newObj.GetComponentsInChildren<TextMesh>();
         for (int i = 0; i < 6; i++)
-            textObject[i].text = row[0];
+            textObject[i].text = theNode.@class;
 
-        newObj.AddComponent<Node>();
-        newObj.name = row[0].Trim();
-        newObj.GetComponent<Node>().setParent(row[1].Trim());
+        newObj.AddComponent<NodeGameObject>();
+        newObj.name = theNode.@class.Trim();
+        newObj.GetComponent<NodeGameObject>().setParent(theNode.parent.Trim());
 
-        if (row[2].Trim() == "yes")
+        if (theNode.@abstract.Trim() == "yes")
         {
-            newObj.GetComponent<Node>().setisNodeAbstract(true);
+            newObj.GetComponent<NodeGameObject>().setisNodeAbstract(true);
         }
         else
         {
-            newObj.GetComponent<Node>().setisNodeAbstract(false);
+            newObj.GetComponent<NodeGameObject>().setisNodeAbstract(false);
         }
 
         nodes.Add(newObj);
@@ -62,17 +64,17 @@ public class Spawn_nodes : MonoBehaviour
     {
         for (int i = 0; i < nodes.Count; i++)
         {
-            if(nodes[i].GetComponent<Node>().getParent() != "")
+            if(nodes[i].GetComponent<NodeGameObject>().getParent() != "")
             {
-                GameObject theParent = nodes.First(Node => Node.name == nodes[i].GetComponent<Node>().getParent());
-                theParent.GetComponent<Node>().addChild();
+                GameObject theParent = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent());
+                theParent.GetComponent<NodeGameObject>().addChild();
             }
         }
         for (int i = 0; i < nodes.Count; i++)
         {
-            if (nodes[i].GetComponent<Node>().getisNodeAbstract() == true)
+            if (nodes[i].GetComponent<NodeGameObject>().getisNodeAbstract() == true)
             {
-                int size = nodes[i].GetComponent<Node>().getAmountOfChildren();
+                int size = nodes[i].GetComponent<NodeGameObject>().getAmountOfChildren();
                 nodes[i].transform.localScale += new Vector3(2*size, 2 * size, 2 * size);
                 nodes[i].GetComponent<Renderer>().material = abstractMaterial;
             }
@@ -83,13 +85,13 @@ public class Spawn_nodes : MonoBehaviour
     {
         for (int i = 0; i < nodes.Count; i++)
         {
-            if (nodes[i].GetComponent<Node>().getParent() != "" && nodes.First(Node => Node.name == nodes[i].GetComponent<Node>().getParent()).GetComponent<Node>().getisNodeAbstract() != true) 
+            if (nodes[i].GetComponent<NodeGameObject>().getParent() != "" && nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).GetComponent<NodeGameObject>().getisNodeAbstract() != true) 
             {
                 LineRenderer relation = nodes[i].AddComponent<LineRenderer>();
                 relation.material = new Material(Shader.Find("Sprites/Default"));
                 Vector3[] positions = new Vector3[2];
                 positions[0] = nodes[i].transform.position;
-                positions[1] = nodes.First(Node => Node.name == nodes[i].GetComponent<Node>().getParent()).transform.position;
+                positions[1] = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).transform.position;
 
                 relation.widthMultiplier = 0.2f;
                 relation.material = new Material(Shader.Find("Sprites/Default"));
@@ -103,13 +105,21 @@ public class Spawn_nodes : MonoBehaviour
 
     public void read()
     {
+        string filename = "json_data.json";
+        jsonString = File.ReadAllText(Application.dataPath + "/Resources/" + filename);
+        RootObject myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
+        Debug.Log(myJsonObject.jsonNodes[1].parent);
+
+        /*
         TextAsset softwareData = Resources.Load<TextAsset>("test_data");
         string[] data = softwareData.text.Split('\n');
+        */
 
-        for (int i = 1; i < data.Length - 1; i++)
+        for (int i = 0; i < myJsonObject.jsonNodes.Count; i++)
         {
-            string[] row = data[i].Split(',');
-            spawnNodes(row);
+            //string[] row = data[i].Split(',');
+            spawnNodes(myJsonObject.jsonNodes[i]);
         }
+        
     }
 }

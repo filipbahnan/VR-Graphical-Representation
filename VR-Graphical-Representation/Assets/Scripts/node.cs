@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Node : MonoBehaviour
+public class NodeGameObject : MonoBehaviour
 {
-    private bool isNodeAbstract;
+    private bool isNodeAbstract ;
     private string parent;
     private int amountOfChildren = 0;
 
@@ -34,4 +34,16 @@ public class Node : MonoBehaviour
     {
         return amountOfChildren;
     }
+}
+
+public class Node
+{
+    public string @class { get; set; }
+    public string parent { get; set; }
+    public string @abstract { get; set; }
+}
+
+public class RootObject
+{
+    public List<Node> jsonNodes { get; set; }
 }
