@@ -44,6 +44,5362 @@
       "class": "boat",
       "parent": "vehicle",
       "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
+    },
+    {
+      "class": "car",
+      "parent": "vehicle",
+      "abstract": "no"
     }
+
   ]
 }

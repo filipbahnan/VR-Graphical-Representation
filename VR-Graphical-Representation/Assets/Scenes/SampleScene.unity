@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3367792668612746648, guid: 1fc9e8387342f1e4691f36dc20a08b9f, type: 3}
-  nodeSize: 1
+  nodeSize: 0.5
   abstractMaterial: {fileID: 2100000, guid: ea2b3ccb155a2494e826611fe9f66a74, type: 2}
 --- !u!4 &858357959
 Transform:

@@ -7,6 +7,22 @@ public class NodeGameObject : MonoBehaviour
     private bool isNodeAbstract ;
     private string parent;
     private int amountOfChildren = 0;
+    private string state;
+    private string color = "red";
+
+    public string getColor()
+    {
+        return color;
+    }
+
+    public string getState()
+    {
+        return state;
+    }
+    public void setisNodeAbstract(string state)
+    {
+        this.state = state;
+    }
 
     public bool getisNodeAbstract()
     {
