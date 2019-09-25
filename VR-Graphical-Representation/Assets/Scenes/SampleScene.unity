@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 858357959}
   - component: {fileID: 858357958}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,8 +298,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3367792668612746648, guid: 1fc9e8387342f1e4691f36dc20a08b9f, type: 3}
-  nodeSize: 0.5
+  centerPrefab: {fileID: 3248521567883086935, guid: a6daf4877a3c1094eaceae2ba42b5a3a,
+    type: 3}
+  nodeSize: 2
   abstractMaterial: {fileID: 2100000, guid: ea2b3ccb155a2494e826611fe9f66a74, type: 2}
+  spacing: 4
 --- !u!4 &858357959
 Transform:
   m_ObjectHideFlags: 0

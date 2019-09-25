@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 public class Spawn_nodes : MonoBehaviour
 {
     public GameObject prefab;
+    public GameObject centerPrefab;
+    private GameObject centerObject;
     public float nodeSize;
     private List<GameObject> nodes = new List<GameObject>();
     public Material abstractMaterial;
@@ -16,6 +18,9 @@ public class Spawn_nodes : MonoBehaviour
     private bool[,,] mapOfNodes;
     private int[] freeSlots;
     private int mapLength = 0;
+    public float spacing;
+    private bool odd;
+    private GameObject[] firstObjects = new GameObject[8];
 
 
     // Start is called before the first frame update
@@ -25,7 +30,8 @@ public class Spawn_nodes : MonoBehaviour
         setNodes();
         positionNodes();
         spawnLines();
-        Debug.Log(nodes.Count);
+        setCenter();
+
     }
 
     void spawnNodes(Node theNode)
@@ -76,6 +82,7 @@ public class Spawn_nodes : MonoBehaviour
         freeSlots = new int[amountOfLayers + 1];
         if((mapLength % 2) == 1)
         {
+            odd = true;
             freeSlots[0] = 1;
             for (int x = 1; x < amountOfLayers + 1; x++)
             {
@@ -84,6 +91,7 @@ public class Spawn_nodes : MonoBehaviour
         }
         else
         {
+            odd = false;
             freeSlots[0] = 8;
             for (int x = 1; x < amountOfLayers + 1; x++)
             {
@@ -127,6 +135,10 @@ public class Spawn_nodes : MonoBehaviour
                 j++;
             }
             listOfRed[x].transform.position = getPosition(j);
+            if (x < 8)
+            {
+                firstObjects[x] = listOfRed[x];
+            }
         }
         for (int x = 0; x < listOfOrange.Count; x++)
         {
@@ -135,7 +147,11 @@ public class Spawn_nodes : MonoBehaviour
             {
                 j++;
             }
-            //listOfOrange[x].transform.position = getPosition(j);
+            listOfOrange[x].transform.position = getPosition(j);
+            if(firstObjects.Length < 8)
+            {
+                firstObjects[firstObjects.Length] = listOfOrange[x];
+            }
         }
         for (int x = 0; x < listOfYellow.Count; x++)
         {
@@ -144,9 +160,15 @@ public class Spawn_nodes : MonoBehaviour
             {
                 j++;
             }
-            //listOfYellow[x].transform.position = getPosition(j);
+            listOfYellow[x].transform.position = getPosition(j);
+            if (firstObjects.Length < 8)
+            {
+                firstObjects[firstObjects.Length] = listOfYellow[x];
+            }
+
         }
-        
+
+
     }
 
     int countLayers(int innerLength, int amountOfLayers)
@@ -196,7 +218,7 @@ public class Spawn_nodes : MonoBehaviour
                     {
                         mapOfNodes[x, y, z] = true;
                         freeSlots[layer] -= 1;
-                        return new Vector3(x,y,z);
+                        return new Vector3(x * spacing, y * spacing, z * spacing);
                     }
                     else
                     {
@@ -261,9 +283,11 @@ public class Spawn_nodes : MonoBehaviour
     void spawnLines()
     {
         for (int i = 0; i < nodes.Count; i++)
-        {
-            if (nodes[i].GetComponent<NodeGameObject>().getParent() != "" && nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).GetComponent<NodeGameObject>().getisNodeAbstract() != true) 
+        {   //nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).GetComponent<NodeGameObject>().getisNodeAbstract() != true
+            if (nodes[i].GetComponent<NodeGameObject>().getParent() != "") 
             {
+                //LineRenderer removeLine = nodes[i].GetComponent<LineRenderer>();
+                //Destroy(removeLine);
                 LineRenderer relation = nodes[i].AddComponent<LineRenderer>();
                 relation.material = new Material(Shader.Find("Sprites/Default"));
                 Vector3[] positions = new Vector3[2];
@@ -299,5 +323,38 @@ public class Spawn_nodes : MonoBehaviour
             spawnNodes(myJsonObject.jsonNodes[i]);
         }
         
+    }
+
+    void setCenter()
+    {
+        Vector3 middle;
+        if (odd == true)
+        {
+            middle = firstObjects[0].transform.position;
+        }
+        else
+        {
+            float x = 0;
+            float y = 0;
+            float z = 0;
+            for(int i = 0; i < 8; i++)
+            {
+                x += firstObjects[i].transform.position.x;
+                y += firstObjects[i].transform.position.y;
+                z += firstObjects[i].transform.position.z;
+            }
+            x = x / 8;
+            y = y / 8;
+            z = z / 8;
+            middle = new Vector3(x, y, z);
+
+
+        }
+        centerObject = Instantiate(centerPrefab, middle, Quaternion.identity);
+        Transform centerTransform = centerObject.transform;
+        for(int i = 0; i < nodes.Count; i++)
+        {
+            nodes[i].transform.SetParent(centerTransform);
+        }
     }
 }
