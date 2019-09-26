@@ -4,10 +4,13 @@ using UnityEngine;
 using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
+using Valve.VR.InteractionSystem;
+
 
 public class Spawn_nodes : MonoBehaviour
 {
     public GameObject prefab;
+    public GameObject platformPrefab;
     public GameObject centerPrefab;
     private GameObject centerObject;
     public float nodeSize;
@@ -21,6 +24,8 @@ public class Spawn_nodes : MonoBehaviour
     public float spacing;
     private bool odd;
     private GameObject[] firstObjects = new GameObject[8];
+    private Vector3 middle;
+    private float platformSize = 14f;
 
 
     // Start is called before the first frame update
@@ -31,6 +36,9 @@ public class Spawn_nodes : MonoBehaviour
         positionNodes();
         spawnLines();
         setCenter();
+        spawnPlatform();
+        setSpawnPosition();
+        Debug.Log(nodes.Count);
 
     }
 
@@ -327,7 +335,6 @@ public class Spawn_nodes : MonoBehaviour
 
     void setCenter()
     {
-        Vector3 middle;
         if (odd == true)
         {
             middle = firstObjects[0].transform.position;
@@ -356,5 +363,28 @@ public class Spawn_nodes : MonoBehaviour
         {
             nodes[i].transform.SetParent(centerTransform);
         }
+    }
+
+    void spawnPlatform()
+    {
+        for (int i = 3; i < mapLength + 1; i++)
+        {
+            platformSize += 4.5f;
+        }
+        GameObject platform = Instantiate(platformPrefab, middle, Quaternion.identity);
+        platform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
+        platform.AddComponent<MeshCollider>();
+
+        Vector3 teleportOffset = new Vector3(middle.x, middle.y + 0.06f, middle.z);
+        GameObject teleportPlatform = Instantiate(platformPrefab, teleportOffset, Quaternion.identity);
+        teleportPlatform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
+        teleportPlatform.AddComponent<MeshCollider>();
+        teleportPlatform.AddComponent<Valve.VR.InteractionSystem.TeleportArea>();
+    }
+
+    void setSpawnPosition()
+    {
+        GameObject thePlayer = GameObject.Find("Player");
+        thePlayer.transform.position = new Vector3(middle.x + platformSize, middle.y, middle.z);
     }
 }
