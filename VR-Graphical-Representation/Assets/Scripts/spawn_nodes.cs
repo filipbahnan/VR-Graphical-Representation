@@ -15,7 +15,7 @@ public class Spawn_nodes : MonoBehaviour
     private GameObject centerObject;
     public float nodeSize;
     private List<GameObject> nodes = new List<GameObject>();
-    public Material abstractMaterial;
+    public Material noChildrenMaterial;
     private string jsonString;
     private int amountOfLayers = 0;
     private bool[,,] mapOfNodes;
@@ -31,6 +31,7 @@ public class Spawn_nodes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject bajs = new GameObject();
         read();
         setNodes();
         positionNodes();
@@ -38,35 +39,127 @@ public class Spawn_nodes : MonoBehaviour
         setCenter();
         spawnPlatform();
         setSpawnPosition();
+        chooseNode();
         Debug.Log(nodes.Count);
 
     }
 
-    void spawnNodes(Node theNode)
+    public void read()
     {
+        string filename = "hib_hotspot_proto.json";
+        jsonString = File.ReadAllText(Application.dataPath + "/Resources/" + filename);
+        RootObject myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
         Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
-        GameObject newObj = Instantiate(prefab, spawnPosition, Quaternion.identity);
-        newObj.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
-        TextMesh[] textObject = newObj.GetComponentsInChildren<TextMesh>();
+        GameObject theRoot = Instantiate(prefab, spawnPosition, Quaternion.identity);
+        theRoot.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+        TextMesh[] textObject = theRoot.GetComponentsInChildren<TextMesh>();
         for (int i = 0; i < 6; i++)
-            textObject[i].text = theNode.@class;
-
-        newObj.AddComponent<NodeGameObject>();
-        newObj.name = theNode.@class.Trim();
-        newObj.GetComponent<NodeGameObject>().setParent(theNode.parent.Trim());
-
-        if (theNode.@abstract.Trim() == "yes")
+            textObject[i].text = myJsonObject.name;
+        theRoot.AddComponent<RootNode>();
+        theRoot.GetComponent<RootNode>().setRootName(myJsonObject.name);
+        nodes.Add(theRoot);
+        for (int i = 0; i < myJsonObject.children.Count; i++)
         {
-            newObj.GetComponent<NodeGameObject>().setisNodeAbstract(true);
+            int depthLimit = 0;
+            int currentDepth = 0;
+            theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth));
+        }
+    }
+
+    void chooseNode()
+    {
+        //kolla om barnen till noden inte har barn, om do inte har det måste if i create children ändras till att kunna visa alla noder!
+    }
+
+    GameObject createChildren(Child theNodeData, int depthLimit, int currentDepth)
+    {
+        currentDepth++;
+        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        GameObject theChild = Instantiate(prefab, spawnPosition, Quaternion.identity);
+        theChild.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+        TextMesh[] textObject = theChild.GetComponentsInChildren<TextMesh>();
+        for (int i = 0; i < 6; i++)
+            textObject[i].text = theNodeData.name;
+
+        theChild.AddComponent<ChildNode>();
+        theChild.GetComponent<ChildNode>().depth = currentDepth;
+        theChild.GetComponent<ChildNode>().setNodeName(theNodeData.name);
+        nodes.Add(theChild);
+        theChild.GetComponent<ChildNode>().setHasChildren(checkIfHasChildren(theNodeData));
+
+        if (theNodeData.children.Count == 0)
+        {
+            int parsedInt = 0;
+            if (int.TryParse(theNodeData.size, out parsedInt))
+            {
+                // Code for if the string was valid
+                theChild.GetComponent<ChildNode>().setSize(parsedInt);
+            }
+            else
+            {
+                // Code for if the string was invalid
+                theChild.GetComponent<ChildNode>().setSize(0);
+            }
+            theChild.GetComponent<ChildNode>().setWeight(theNodeData.weight);
+        }
+        if (/*theNodeData.children.Count < 4 &&*/ currentDepth <= depthLimit)
+        {
+            for (int i = 0; i < theNodeData.children.Count; i++)
+            {
+                theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i],depthLimit, currentDepth));
+            }
+        }
+        Debug.Log(theChild.GetComponent<ChildNode>().getNodeName());
+        Debug.Log(currentDepth);
+        return theChild;
+    }
+
+    bool checkIfHasChildren(Child theNodeData)
+    {
+        if(theNodeData.children.Count == 0)
+        {
+            return false;
         }
         else
         {
-            newObj.GetComponent<NodeGameObject>().setisNodeAbstract(false);
+            return true;
         }
-
-        nodes.Add(newObj);
-
     }
+
+    /*
+    Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+    GameObject newObj = Instantiate(prefab, spawnPosition, Quaternion.identity);
+    newObj.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+    TextMesh[] textObject = newObj.GetComponentsInChildren<TextMesh>();
+
+    for (int i = 0; i < 6; i++)
+        textObject[i].text = theNode.name;
+
+    newObj.AddComponent<Node>();
+    newObj.name = theNode.name.Trim();
+    for(int i = 0; i < theNode)
+    if()
+    for(int i = 0; i < theNode.children.Count; i++)
+    {
+        newObj.GetComponent<Node>().children.Add(theNode.children[i]);
+    }
+
+    int parsedInt = 0;
+    if (int.TryParse(theNode.size, out parsedInt))
+    {
+        // Code for if the string was valid
+        newObj.GetComponent<Node>().setSize(parsedInt);
+    }
+    else
+    {
+        // Code for if the string was invalid
+        newObj.GetComponent<Node>().setSize(0);
+    }
+
+    nodes.Add(newObj);
+    */
+
+
 
     void positionNodes()
     {
@@ -119,7 +212,15 @@ public class Spawn_nodes : MonoBehaviour
 
         for (int x = 0; x < nodes.Count; x++)
         {
-            string color = nodes[x].GetComponent<NodeGameObject>().getColor();
+            string color;
+            if (x==0)
+            {
+                color = nodes[x].GetComponent<RootNode>().getColor();
+            }
+            else
+            {
+                color = nodes[x].GetComponent<ChildNode>().getColor();
+            }
             if(color == "red")
             {
                 listOfRed.Add(nodes[x]);
@@ -268,31 +369,54 @@ public class Spawn_nodes : MonoBehaviour
     }
 
     void setNodes()
-    {
+    {/*
         for (int i = 0; i < nodes.Count; i++)
         {
-            if(nodes[i].GetComponent<NodeGameObject>().getParent() != "")
+            if(nodes[i].GetComponent<ChildNode>().getParent() != "")
             {
-                GameObject theParent = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent());
-                theParent.GetComponent<NodeGameObject>().addChild();
+                GameObject theParent = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<Node>().getParent());
+                theParent.GetComponent<Node>().addChild();
             }
         }
+        */
         for (int i = 0; i < nodes.Count; i++)
-        {
-            if (nodes[i].GetComponent<NodeGameObject>().getisNodeAbstract() == true)
+        {   if(nodes[i].GetComponent<ChildNode>() != null)
             {
-                int size = nodes[i].GetComponent<NodeGameObject>().getAmountOfChildren();
-                //nodes[i].transform.localScale += new Vector3(2*size, 2 * size, 2 * size);
-                nodes[i].GetComponent<Renderer>().material = abstractMaterial;
+                if (nodes[i].GetComponent<ChildNode>().getHasChildren() == false)
+                {
+                    nodes[i].GetComponent<Renderer>().material = noChildrenMaterial;
+                }
             }
         }
+        
     }
 
     void spawnLines()
     {
         for (int i = 0; i < nodes.Count; i++)
-        {   //nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).GetComponent<NodeGameObject>().getisNodeAbstract() != true
-            if (nodes[i].GetComponent<NodeGameObject>().getParent() != "") 
+        {   
+            if(nodes[i].GetComponent<ChildNode>() == null)
+            {     
+                for (int x = 0; x < nodes[i].GetComponent<RootNode>().children.Count; x++)
+                {
+                    GameObject lineObj = new GameObject();
+                    lineObj.transform.position = nodes[i].transform.position;
+                    LineRenderer relation = lineObj.AddComponent<LineRenderer>();
+                    relation.material = new Material(Shader.Find("Sprites/Default"));
+                    Vector3[] positions = new Vector3[2];
+                    positions[0] = new Vector3(0, 0, 0);
+                    positions[1] = nodes[i].GetComponent<RootNode>().children[x].transform.position;
+                    Transform transformOfChild = nodes[i].transform;
+                    positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
+                    relation.widthMultiplier = 0.2f;
+                    relation.SetPositions(positions);
+                    relation.useWorldSpace = false;
+                    lineObj.transform.SetParent(nodes[i].transform);
+                    lineObj.transform.localScale = new Vector3(1, 1, 1);
+
+                }
+            }/*
+            if (nodes[i].GetComponent<ChildNode>().getParent() != "") 
             {
                 //LineRenderer removeLine = nodes[i].GetComponent<LineRenderer>();
                 //Destroy(removeLine);
@@ -301,36 +425,16 @@ public class Spawn_nodes : MonoBehaviour
                 Vector3[] positions = new Vector3[2];
                 //positions[0] = nodes[i].transform.position;
                 positions[0] = new Vector3(0,0,0);
-                positions[1] = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<NodeGameObject>().getParent()).transform.position;
+                positions[1] = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<Node>().getParent()).transform.position;
                 Transform transformOfChild = nodes[i].transform;
                 positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
                 relation.widthMultiplier = 0.2f;
                 relation.SetPositions(positions);
                 relation.useWorldSpace = false;
 
-            }
+            }*/
             
-        }
-            
-    }
-
-    public void read()
-    {
-        string filename = "json_data.json";
-        jsonString = File.ReadAllText(Application.dataPath + "/Resources/" + filename);
-        RootObject myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
-
-        /*
-        TextAsset softwareData = Resources.Load<TextAsset>("test_data");
-        string[] data = softwareData.text.Split('\n');
-        */
-
-        for (int i = 0; i < myJsonObject.jsonNodes.Count; i++)
-        {
-            //string[] row = data[i].Split(',');
-            spawnNodes(myJsonObject.jsonNodes[i]);
-        }
-        
+        }   
     }
 
     void setCenter()

@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NodeGameObject : MonoBehaviour
+/*
+public class Node : MonoBehaviour
 {
     private bool isNodeAbstract ;
-    private string parent;
+    public List<GameObject> children;
     private int amountOfChildren = 0;
     private string state;
     private string color = "red";
+    private int size;
+    private double weight;
 
     public string getColor()
     {
@@ -24,34 +27,26 @@ public class NodeGameObject : MonoBehaviour
         this.state = state;
     }
 
-    public bool getisNodeAbstract()
+    public int getSize()
     {
-        return isNodeAbstract;
+        return size;
     }
-    public void setisNodeAbstract(bool isNodeAbstract)
+    public void setSize(int size)
     {
-        this.isNodeAbstract = isNodeAbstract;
-    }
-
-    public string getParent()
-    {
-        return parent;
-    }
-    public void setParent(string parent)
-    {
-        this.parent = parent;
+        this.size = size;
     }
 
-    public void addChild()
+    public double getWeight()
     {
-        amountOfChildren++;
+        return weight;
     }
-    public int getAmountOfChildren()
+    public void setWeight(double weight)
     {
-        return amountOfChildren;
+        this.weight = weight;
     }
-}
+}*/
 
+/*
 public class Node
 {
     public string @class { get; set; }
@@ -62,4 +57,93 @@ public class Node
 public class RootObject
 {
     public List<Node> jsonNodes { get; set; }
+}*/
+
+public class RootNode : MonoBehaviour
+{
+    private string rootName;
+    public List<GameObject> children = new List<GameObject>();
+    private string color = "red";
+
+
+    public string getRootName()
+    {
+        return rootName;
+    }
+    public void setRootName(string rootName)
+    {
+        this.rootName = rootName;
+    }
+
+    public string getColor()
+    {
+        return color;
+    }
+}
+
+public class ChildNode : MonoBehaviour
+{
+    private string nodeName;
+    public List<GameObject> children = new List<GameObject>();
+    private int size;
+    private double? weight;
+    public int depth;
+    private string color = "red";
+    private bool hasChildren = false;
+
+    public void setHasChildren(bool hasChildren)
+    {
+        this.hasChildren = hasChildren;
+    }
+    public bool getHasChildren()
+    {
+        return hasChildren;
+    }
+
+    public string getNodeName()
+    {
+        return nodeName;
+    }
+    public void setNodeName(string nodeName)
+    {
+        this.nodeName = nodeName;
+    }
+
+    public int? getSize()
+    {
+        return size;
+    }
+    public void setSize(int size)
+    {
+        this.size = size;
+    }
+
+    public double? getWeight()
+    {
+        return weight;
+    }
+    public void setWeight(double? weight)
+    {
+        this.weight = weight;
+    }
+
+    public string getColor()
+    {
+        return color;
+    }
+
+}
+
+public class Child 
+{
+    public string name { get; set; }
+    public List<Child> children { get; set; }
+    public string size { get; set; }
+    public double? weight { get; set; }
+}
+
+public class RootObject 
+{
+    public string name { get; set; }
+    public List<Child> children { get; set; }
 }
