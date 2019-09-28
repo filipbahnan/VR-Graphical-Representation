@@ -5,6 +5,7 @@ using System.Linq;
 using System.IO;
 using Newtonsoft.Json;
 using Valve.VR.InteractionSystem;
+using System;
 
 
 public class Spawn_nodes : MonoBehaviour
@@ -13,6 +14,8 @@ public class Spawn_nodes : MonoBehaviour
     public GameObject platformPrefab;
     public GameObject centerPrefab;
     private GameObject centerObject;
+    private GameObject platform;
+    GameObject teleportPlatform;
     public float nodeSize;
     private List<GameObject> nodes = new List<GameObject>();
     public Material noChildrenMaterial;
@@ -26,6 +29,7 @@ public class Spawn_nodes : MonoBehaviour
     private GameObject[] firstObjects = new GameObject[8];
     private Vector3 middle;
     private float platformSize = 14f;
+    public GameObject chosenNode;
 
 
     // Start is called before the first frame update
@@ -39,9 +43,13 @@ public class Spawn_nodes : MonoBehaviour
         setCenter();
         spawnPlatform();
         setSpawnPosition();
-        chooseNode();
         Debug.Log(nodes.Count);
 
+    }
+
+    private void Update()
+    {
+        chooseNode(chosenNode);
     }
 
     public void read()
@@ -49,7 +57,7 @@ public class Spawn_nodes : MonoBehaviour
         string filename = "hib_hotspot_proto.json";
         jsonString = File.ReadAllText(Application.dataPath + "/Resources/" + filename);
         RootObject myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
-        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         GameObject theRoot = Instantiate(prefab, spawnPosition, Quaternion.identity);
         theRoot.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
         TextMesh[] textObject = theRoot.GetComponentsInChildren<TextMesh>();
@@ -60,32 +68,72 @@ public class Spawn_nodes : MonoBehaviour
         nodes.Add(theRoot);
         for (int i = 0; i < myJsonObject.children.Count; i++)
         {
+            //setId(myJsonObject.children[i]);
             int depthLimit = 0;
             int currentDepth = 0;
             theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth));
         }
     }
+    /*
+    public void setId(Child node)
+    {
+        node.id = Guid.NewGuid();
+        Debug.Log(node.id);
+        for(int i = 0; i < node.children.Count; i++)
+        {
+            setId(node.children[i]);
+        }
+    }*/
 
-    void chooseNode()
+    void chooseNode(GameObject chosenNode)
     {
         //kolla om barnen till noden inte har barn, om do inte har det måste if i create children ändras till att kunna visa alla noder!
+        resetEverything();
+        createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + 3, chosenNode.GetComponent<ChildNode>().depth);
+        destroyObjects();
+        setNodes();
+        positionNodes();
+        spawnLines();
+        setCenter();
+        spawnPlatform();
+        setSpawnPosition();
+        Destroy(chosenNode);
     }
-
+    void resetEverything()
+    {
+        nodes.Clear();
+        Array.Clear(mapOfNodes, 0, mapOfNodes.Length);
+        Array.Clear(freeSlots, 0, freeSlots.Length);
+        Array.Clear(firstObjects, 0, firstObjects.Length);
+        firstObjects = new GameObject[8];
+        mapLength = 0;
+        amountOfLayers = 0;
+        platformSize = 14f;
+    }
+    void destroyObjects()
+    {
+        Destroy(centerObject);
+        Destroy(platform);
+        Destroy(teleportPlatform);
+    }
+    
     GameObject createChildren(Child theNodeData, int depthLimit, int currentDepth)
     {
         currentDepth++;
-        Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         GameObject theChild = Instantiate(prefab, spawnPosition, Quaternion.identity);
         theChild.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
         TextMesh[] textObject = theChild.GetComponentsInChildren<TextMesh>();
         for (int i = 0; i < 6; i++)
             textObject[i].text = theNodeData.name;
-
         theChild.AddComponent<ChildNode>();
         theChild.GetComponent<ChildNode>().depth = currentDepth;
         theChild.GetComponent<ChildNode>().setNodeName(theNodeData.name);
         nodes.Add(theChild);
         theChild.GetComponent<ChildNode>().setHasChildren(checkIfHasChildren(theNodeData));
+        theChild.GetComponent<ChildNode>().jsonData = theNodeData;
+        //theChild.GetComponent<ChildNode>().setId(theNodeData.id);
+        //Debug.Log(theNodeData.id);
 
         if (theNodeData.children.Count == 0)
         {
@@ -109,8 +157,6 @@ public class Spawn_nodes : MonoBehaviour
                 theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i],depthLimit, currentDepth));
             }
         }
-        Debug.Log(theChild.GetComponent<ChildNode>().getNodeName());
-        Debug.Log(currentDepth);
         return theChild;
     }
 
@@ -204,16 +250,16 @@ public class Spawn_nodes : MonoBehaviour
             Debug.Log(freeSlots[x]);
         }
 
-
+        
         mapOfNodes = new bool[mapLength, mapLength, mapLength];
         List<GameObject> listOfRed = new List<GameObject>();
         List<GameObject> listOfOrange = new List<GameObject>();
         List<GameObject> listOfYellow = new List<GameObject>();
-
+        
         for (int x = 0; x < nodes.Count; x++)
         {
             string color;
-            if (x==0)
+            if (nodes[x].GetComponent<ChildNode>() == null)
             {
                 color = nodes[x].GetComponent<RootNode>().getColor();
             }
@@ -311,12 +357,12 @@ public class Spawn_nodes : MonoBehaviour
 
     Vector3 getPosition(int layer)
     {
-        int x = Random.Range(0, mapLength );
-        int y = Random.Range(0, mapLength );
-        int z = Random.Range(0, mapLength );
+        int x = UnityEngine.Random.Range(0, mapLength );
+        int y = UnityEngine.Random.Range(0, mapLength );
+        int z = UnityEngine.Random.Range(0, mapLength );
         int left = 0 + amountOfLayers - layer;
         int right = mapLength - 1 - amountOfLayers + layer;
-
+        
         while (true)
         {
             if (x == left || x == right || y == left || y == right || z == left || z == right)
@@ -359,13 +405,12 @@ public class Spawn_nodes : MonoBehaviour
                 z = rollPosition();
             }
         }
-        
 
     }
 
     int rollPosition()
     {
-        return Random.Range(0, mapLength);
+        return UnityEngine.Random.Range(0, mapLength);
     }
 
     void setNodes()
@@ -415,24 +460,28 @@ public class Spawn_nodes : MonoBehaviour
                     lineObj.transform.localScale = new Vector3(1, 1, 1);
 
                 }
-            }/*
-            if (nodes[i].GetComponent<ChildNode>().getParent() != "") 
+            }
+            else 
             {
-                //LineRenderer removeLine = nodes[i].GetComponent<LineRenderer>();
-                //Destroy(removeLine);
-                LineRenderer relation = nodes[i].AddComponent<LineRenderer>();
-                relation.material = new Material(Shader.Find("Sprites/Default"));
-                Vector3[] positions = new Vector3[2];
-                //positions[0] = nodes[i].transform.position;
-                positions[0] = new Vector3(0,0,0);
-                positions[1] = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<Node>().getParent()).transform.position;
-                Transform transformOfChild = nodes[i].transform;
-                positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
-                relation.widthMultiplier = 0.2f;
-                relation.SetPositions(positions);
-                relation.useWorldSpace = false;
+                for (int x = 0; x < nodes[i].GetComponent<ChildNode>().children.Count; x++)
+                {
+                    GameObject lineObj = new GameObject();
+                    lineObj.transform.position = nodes[i].transform.position;
+                    LineRenderer relation = lineObj.AddComponent<LineRenderer>();
+                    relation.material = new Material(Shader.Find("Sprites/Default"));
+                    Vector3[] positions = new Vector3[2];
+                    positions[0] = new Vector3(0, 0, 0);
+                    positions[1] = nodes[i].GetComponent<ChildNode>().children[x].transform.position;
+                    Transform transformOfChild = nodes[i].transform;
+                    positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
+                    relation.widthMultiplier = 0.2f;
+                    relation.SetPositions(positions);
+                    relation.useWorldSpace = false;
+                    lineObj.transform.SetParent(nodes[i].transform);
+                    lineObj.transform.localScale = new Vector3(1, 1, 1);
+                }
 
-            }*/
+            }
             
         }   
     }
@@ -475,12 +524,12 @@ public class Spawn_nodes : MonoBehaviour
         {
             platformSize += 4.5f;
         }
-        GameObject platform = Instantiate(platformPrefab, middle, Quaternion.identity);
+        platform = Instantiate(platformPrefab, middle, Quaternion.identity);
         platform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
         platform.AddComponent<MeshCollider>();
 
         Vector3 teleportOffset = new Vector3(middle.x, middle.y + 0.06f, middle.z);
-        GameObject teleportPlatform = Instantiate(platformPrefab, teleportOffset, Quaternion.identity);
+        teleportPlatform = Instantiate(platformPrefab, teleportOffset, Quaternion.identity);
         teleportPlatform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
         teleportPlatform.AddComponent<MeshCollider>();
         teleportPlatform.AddComponent<Valve.VR.InteractionSystem.TeleportArea>();

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 /*
 public class Node : MonoBehaviour
@@ -90,6 +91,17 @@ public class ChildNode : MonoBehaviour
     public int depth;
     private string color = "red";
     private bool hasChildren = false;
+    private Guid id;
+    public Child jsonData;
+
+    public void setId(Guid id)
+    {
+        this.id = id;
+    }
+    public Guid getId()
+    {
+        return id;
+    }
 
     public void setHasChildren(bool hasChildren)
     {
@@ -140,6 +152,7 @@ public class Child
     public List<Child> children { get; set; }
     public string size { get; set; }
     public double? weight { get; set; }
+    //public Guid id = Guid.NewGuid();
 }
 
 public class RootObject 
