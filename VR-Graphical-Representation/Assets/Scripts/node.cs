@@ -87,7 +87,7 @@ public class ChildNode : MonoBehaviour
     private string nodeName;
     public List<GameObject> children = new List<GameObject>();
     private int size;
-    private double? weight;
+    private decimal? weight;
     public int depth;
     private string color = "red";
     private bool hasChildren = false;
@@ -121,7 +121,7 @@ public class ChildNode : MonoBehaviour
         this.nodeName = nodeName;
     }
 
-    public int? getSize()
+    public int getSize()
     {
         return size;
     }
@@ -130,11 +130,11 @@ public class ChildNode : MonoBehaviour
         this.size = size;
     }
 
-    public double? getWeight()
+    public decimal? getWeight()
     {
         return weight;
     }
-    public void setWeight(double? weight)
+    public void setWeight(decimal? weight)
     {
         this.weight = weight;
     }
@@ -151,7 +151,7 @@ public class Child
     public string name { get; set; }
     public List<Child> children { get; set; }
     public string size { get; set; }
-    public double? weight { get; set; }
+    public decimal? weight { get; set; }
     //public Guid id = Guid.NewGuid();
 }
 

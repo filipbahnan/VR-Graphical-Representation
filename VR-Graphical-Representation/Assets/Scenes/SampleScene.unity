@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba38613290dabd4eba00a6ca6fb320b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3367792668612746648, guid: 1fc9e8387342f1e4691f36dc20a08b9f, type: 3}
+  prefab: {fileID: 6061763003543502852, guid: 768268051485c7c4a98f4d6e5f46562f, type: 3}
   platformPrefab: {fileID: 2820532291278369788, guid: 522b1234204f9b548b703f1b934b9ba0,
     type: 3}
   centerPrefab: {fileID: 3248521567883086935, guid: a6daf4877a3c1094eaceae2ba42b5a3a,
@@ -305,6 +305,7 @@ MonoBehaviour:
   nodeSize: 2
   noChildrenMaterial: {fileID: 2100000, guid: ea2b3ccb155a2494e826611fe9f66a74, type: 2}
   spacing: 4
+  chosenNode: {fileID: 0}
 --- !u!4 &858357959
 Transform:
   m_ObjectHideFlags: 0
@@ -348,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -356,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
@@ -368,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

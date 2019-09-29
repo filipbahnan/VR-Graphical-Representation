@@ -30,12 +30,13 @@ public class Spawn_nodes : MonoBehaviour
     private Vector3 middle;
     private float platformSize = 14f;
     public GameObject chosenNode;
+    private int smallestSize = 0;
+    private int biggestSize = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject bajs = new GameObject();
         read();
         setNodes();
         positionNodes();
@@ -63,6 +64,9 @@ public class Spawn_nodes : MonoBehaviour
         TextMesh[] textObject = theRoot.GetComponentsInChildren<TextMesh>();
         for (int i = 0; i < 6; i++)
             textObject[i].text = myJsonObject.name;
+
+        for (int i = 6; i < 18; i++)
+            textObject[i].text = "";
         theRoot.AddComponent<RootNode>();
         theRoot.GetComponent<RootNode>().setRootName(myJsonObject.name);
         nodes.Add(theRoot);
@@ -89,7 +93,8 @@ public class Spawn_nodes : MonoBehaviour
     {
         //kolla om barnen till noden inte har barn, om do inte har det måste if i create children ändras till att kunna visa alla noder!
         resetEverything();
-        createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + 3, chosenNode.GetComponent<ChildNode>().depth);
+        int limit = 1;
+        createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth);
         destroyObjects();
         setNodes();
         positionNodes();
@@ -109,7 +114,9 @@ public class Spawn_nodes : MonoBehaviour
         mapLength = 0;
         amountOfLayers = 0;
         platformSize = 14f;
-    }
+        smallestSize = 0;
+        biggestSize = 0;
+}
     void destroyObjects()
     {
         Destroy(centerObject);
@@ -118,7 +125,7 @@ public class Spawn_nodes : MonoBehaviour
     }
     
     GameObject createChildren(Child theNodeData, int depthLimit, int currentDepth)
-    {
+    {   
         currentDepth++;
         Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         GameObject theChild = Instantiate(prefab, spawnPosition, Quaternion.identity);
@@ -126,6 +133,29 @@ public class Spawn_nodes : MonoBehaviour
         TextMesh[] textObject = theChild.GetComponentsInChildren<TextMesh>();
         for (int i = 0; i < 6; i++)
             textObject[i].text = theNodeData.name;
+
+        for (int i = 6; i < 12; i++)
+        {
+            if (theNodeData.size == null)
+            {
+                textObject[i].text = "";
+            }
+            else
+            {
+                textObject[i].text = theNodeData.size.Trim();
+            }
+        }
+        for (int i = 12; i < 18; i++)
+        {
+            if (theNodeData.weight == null)
+            {
+                textObject[i].text = "";
+            }
+            else
+            {
+                textObject[i].text = theNodeData.weight.ToString();
+            }
+        }
         theChild.AddComponent<ChildNode>();
         theChild.GetComponent<ChildNode>().depth = currentDepth;
         theChild.GetComponent<ChildNode>().setNodeName(theNodeData.name);
@@ -150,7 +180,15 @@ public class Spawn_nodes : MonoBehaviour
             }
             theChild.GetComponent<ChildNode>().setWeight(theNodeData.weight);
         }
-        if (/*theNodeData.children.Count < 4 &&*/ currentDepth <= depthLimit)
+        if (theChild.GetComponent<ChildNode>().getSize() < smallestSize)
+        {
+            smallestSize = theChild.GetComponent<ChildNode>().getSize();
+        }
+        if (theChild.GetComponent<ChildNode>().getSize() > biggestSize)
+        {
+            biggestSize = theChild.GetComponent<ChildNode>().getSize();
+        }
+        if (currentDepth <= depthLimit)
         {
             for (int i = 0; i < theNodeData.children.Count; i++)
             {
@@ -171,41 +209,6 @@ public class Spawn_nodes : MonoBehaviour
             return true;
         }
     }
-
-    /*
-    Vector3 spawnPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f), Random.Range(-10f, 10f));
-    GameObject newObj = Instantiate(prefab, spawnPosition, Quaternion.identity);
-    newObj.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
-    TextMesh[] textObject = newObj.GetComponentsInChildren<TextMesh>();
-
-    for (int i = 0; i < 6; i++)
-        textObject[i].text = theNode.name;
-
-    newObj.AddComponent<Node>();
-    newObj.name = theNode.name.Trim();
-    for(int i = 0; i < theNode)
-    if()
-    for(int i = 0; i < theNode.children.Count; i++)
-    {
-        newObj.GetComponent<Node>().children.Add(theNode.children[i]);
-    }
-
-    int parsedInt = 0;
-    if (int.TryParse(theNode.size, out parsedInt))
-    {
-        // Code for if the string was valid
-        newObj.GetComponent<Node>().setSize(parsedInt);
-    }
-    else
-    {
-        // Code for if the string was invalid
-        newObj.GetComponent<Node>().setSize(0);
-    }
-
-    nodes.Add(newObj);
-    */
-
-
 
     void positionNodes()
     {
@@ -414,25 +417,22 @@ public class Spawn_nodes : MonoBehaviour
     }
 
     void setNodes()
-    {/*
-        for (int i = 0; i < nodes.Count; i++)
-        {
-            if(nodes[i].GetComponent<ChildNode>().getParent() != "")
-            {
-                GameObject theParent = nodes.First(NodeGameObject => NodeGameObject.name == nodes[i].GetComponent<Node>().getParent());
-                theParent.GetComponent<Node>().addChild();
-            }
-        }
-        */
+    {
         for (int i = 0; i < nodes.Count; i++)
         {   if(nodes[i].GetComponent<ChildNode>() != null)
             {
                 if (nodes[i].GetComponent<ChildNode>().getHasChildren() == false)
                 {
                     nodes[i].GetComponent<Renderer>().material = noChildrenMaterial;
+
+                    float sizePercentage = (nodes[i].GetComponent<ChildNode>().getSize() - smallestSize) / biggestSize;
+                    Debug.Log(sizePercentage);
+                    float nodeSize = 1.5f + (1.5f * sizePercentage);
+                    nodes[i].transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
                 }
             }
         }
+
         
     }
 
@@ -453,7 +453,7 @@ public class Spawn_nodes : MonoBehaviour
                     positions[1] = nodes[i].GetComponent<RootNode>().children[x].transform.position;
                     Transform transformOfChild = nodes[i].transform;
                     positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
-                    relation.widthMultiplier = 0.2f;
+                    relation.widthMultiplier = 0.1f;
                     relation.SetPositions(positions);
                     relation.useWorldSpace = false;
                     lineObj.transform.SetParent(nodes[i].transform);
@@ -474,7 +474,7 @@ public class Spawn_nodes : MonoBehaviour
                     positions[1] = nodes[i].GetComponent<ChildNode>().children[x].transform.position;
                     Transform transformOfChild = nodes[i].transform;
                     positions[1] = transformOfChild.InverseTransformPoint(positions[1]);
-                    relation.widthMultiplier = 0.2f;
+                    relation.widthMultiplier = 0.1f;
                     relation.SetPositions(positions);
                     relation.useWorldSpace = false;
                     lineObj.transform.SetParent(nodes[i].transform);
