@@ -297,13 +297,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba38613290dabd4eba00a6ca6fb320b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6061763003543502852, guid: 768268051485c7c4a98f4d6e5f46562f, type: 3}
+  prefab: {fileID: 2047371653471667558, guid: f197e6d67c867df43af6f7850fb12cee, type: 3}
   platformPrefab: {fileID: 2820532291278369788, guid: 522b1234204f9b548b703f1b934b9ba0,
     type: 3}
   centerPrefab: {fileID: 3248521567883086935, guid: a6daf4877a3c1094eaceae2ba42b5a3a,
     type: 3}
   nodeSize: 2
   noChildrenMaterial: {fileID: 2100000, guid: ea2b3ccb155a2494e826611fe9f66a74, type: 2}
+  rootMaterial: {fileID: 2100000, guid: da2ab95597e69544e88876bb92e56261, type: 2}
   spacing: 4
   chosenNode: {fileID: 0}
 --- !u!4 &858357959

@@ -19,6 +19,7 @@ public class Spawn_nodes : MonoBehaviour
     public float nodeSize;
     private List<GameObject> nodes = new List<GameObject>();
     public Material noChildrenMaterial;
+    public Material rootMaterial;
     private string jsonString;
     private int amountOfLayers = 0;
     private bool[,,] mapOfNodes;
@@ -30,8 +31,9 @@ public class Spawn_nodes : MonoBehaviour
     private Vector3 middle;
     private float platformSize = 14f;
     public GameObject chosenNode;
-    private int smallestSize = 0;
-    private int biggestSize = 0;
+    private float smallestSize = 0;
+    private float biggestSize = 0;
+    private Child previousNode;
 
 
     // Start is called before the first frame update
@@ -92,17 +94,32 @@ public class Spawn_nodes : MonoBehaviour
     void chooseNode(GameObject chosenNode)
     {
         //kolla om barnen till noden inte har barn, om do inte har det måste if i create children ändras till att kunna visa alla noder!
-        resetEverything();
-        int limit = 1;
-        createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth);
-        destroyObjects();
-        setNodes();
-        positionNodes();
-        spawnLines();
-        setCenter();
-        spawnPlatform();
-        setSpawnPosition();
-        Destroy(chosenNode);
+        if (chosenNode.GetComponent<ChildNode>().jsonData.children.Count != 0)
+        {
+            resetEverything();
+            int limit;
+            if (previousNode == chosenNode.GetComponent<ChildNode>().jsonData)
+            {
+                limit = 1;
+            }
+            else
+            {
+                limit = 2;
+            }
+            createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth);
+            destroyObjects();
+            setNodes();
+            positionNodes();
+            spawnLines();
+            setCenter();
+            spawnPlatform();
+            setSpawnPosition();
+            previousNode = chosenNode.GetComponent<ChildNode>().jsonData;
+            Destroy(chosenNode);
+        }
+        Debug.Log(smallestSize);
+        Debug.Log(biggestSize);
+
     }
     void resetEverything()
     {
@@ -167,6 +184,7 @@ public class Spawn_nodes : MonoBehaviour
 
         if (theNodeData.children.Count == 0)
         {
+            Debug.Log("bajs");
             int parsedInt = 0;
             if (int.TryParse(theNodeData.size, out parsedInt))
             {
@@ -179,14 +197,14 @@ public class Spawn_nodes : MonoBehaviour
                 theChild.GetComponent<ChildNode>().setSize(0);
             }
             theChild.GetComponent<ChildNode>().setWeight(theNodeData.weight);
-        }
-        if (theChild.GetComponent<ChildNode>().getSize() < smallestSize)
-        {
-            smallestSize = theChild.GetComponent<ChildNode>().getSize();
-        }
-        if (theChild.GetComponent<ChildNode>().getSize() > biggestSize)
-        {
-            biggestSize = theChild.GetComponent<ChildNode>().getSize();
+            if (theChild.GetComponent<ChildNode>().getSize() < smallestSize || smallestSize == 0)
+            {
+                smallestSize = theChild.GetComponent<ChildNode>().getSize();
+            }
+            if (theChild.GetComponent<ChildNode>().getSize() > biggestSize)
+            {
+                biggestSize = theChild.GetComponent<ChildNode>().getSize();
+            }
         }
         if (currentDepth <= depthLimit)
         {
@@ -253,80 +271,21 @@ public class Spawn_nodes : MonoBehaviour
             Debug.Log(freeSlots[x]);
         }
 
-        
         mapOfNodes = new bool[mapLength, mapLength, mapLength];
-        List<GameObject> listOfRed = new List<GameObject>();
-        List<GameObject> listOfOrange = new List<GameObject>();
-        List<GameObject> listOfYellow = new List<GameObject>();
-        
+
         for (int x = 0; x < nodes.Count; x++)
         {
-            string color;
-            if (nodes[x].GetComponent<ChildNode>() == null)
-            {
-                color = nodes[x].GetComponent<RootNode>().getColor();
-            }
-            else
-            {
-                color = nodes[x].GetComponent<ChildNode>().getColor();
-            }
-            if(color == "red")
-            {
-                listOfRed.Add(nodes[x]);
-            }
-            else if(color == "orange")
-            {
-                listOfOrange.Add(nodes[x]);
-            }
-            else if(color == "yellow")
-            {
-                listOfYellow.Add(nodes[x]);
-            }
-        }
-        
-        
-        for (int x = 0; x < listOfRed.Count; x++)
-        {
             int j = 0;
             while (freeSlots[j] == 0)
             {
                 j++;
             }
-            listOfRed[x].transform.position = getPosition(j);
+            nodes[x].transform.position = getPosition(j);
             if (x < 8)
             {
-                firstObjects[x] = listOfRed[x];
+                firstObjects[x] = nodes[x];
             }
         }
-        for (int x = 0; x < listOfOrange.Count; x++)
-        {
-            int j = 0;
-            while (freeSlots[j] == 0)
-            {
-                j++;
-            }
-            listOfOrange[x].transform.position = getPosition(j);
-            if(firstObjects.Length < 8)
-            {
-                firstObjects[firstObjects.Length] = listOfOrange[x];
-            }
-        }
-        for (int x = 0; x < listOfYellow.Count; x++)
-        {
-            int j = 0;
-            while (freeSlots[j] == 0)
-            {
-                j++;
-            }
-            listOfYellow[x].transform.position = getPosition(j);
-            if (firstObjects.Length < 8)
-            {
-                firstObjects[firstObjects.Length] = listOfYellow[x];
-            }
-
-        }
-
-
     }
 
     int countLayers(int innerLength, int amountOfLayers)
@@ -425,18 +384,28 @@ public class Spawn_nodes : MonoBehaviour
                 {
                     nodes[i].GetComponent<Renderer>().material = noChildrenMaterial;
 
-                    float sizePercentage = (nodes[i].GetComponent<ChildNode>().getSize() - smallestSize) / biggestSize;
-                    Debug.Log(sizePercentage);
-                    float nodeSize = 1.5f + (1.5f * sizePercentage);
+                    float sizePercentage = (nodes[i].GetComponent<ChildNode>().getSize() - smallestSize) / (biggestSize - smallestSize);
+                    Debug.Log(sizePercentage + " = " + nodes[i].GetComponent<ChildNode>().getSize() + " - " + smallestSize + " / " + biggestSize + " - " + smallestSize);
+                    float nodeSize = 1f + (2f * sizePercentage);
                     nodes[i].transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
                 }
+                if(i == 0)
+                {
+                    nodes[i].GetComponent<Renderer>().material = rootMaterial;
+                }
+            }
+            else
+            {
+                nodes[i].GetComponent<Renderer>().material = rootMaterial;
             }
         }
+        if (nodes[0].GetComponent<ChildNode>() != null)
+        {
+            nodes.Sort((a, b) => b.GetComponent<ChildNode>().children.Count.CompareTo(a.GetComponent<ChildNode>().children.Count));
+        }
+}
 
-        
-    }
-
-    void spawnLines()
+void spawnLines()
     {
         for (int i = 0; i < nodes.Count; i++)
         {   
