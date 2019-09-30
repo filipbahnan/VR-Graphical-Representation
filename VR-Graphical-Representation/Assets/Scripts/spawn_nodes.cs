@@ -117,9 +117,24 @@ public class Spawn_nodes : MonoBehaviour
             previousNode = chosenNode.GetComponent<ChildNode>().jsonData;
             Destroy(chosenNode);
         }
+        else
+        {
+
+        }
         Debug.Log(smallestSize);
         Debug.Log(biggestSize);
 
+    }
+
+    void createPhysicalObject(GameObject chosenNode)
+    {
+        GameObject player = GameObject.Find("Player");
+        Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 10, player.transform.position.z);
+        Debug.Log(playerPosition);
+        GameObject newObj = Instantiate(chosenNode, playerPosition, Quaternion.identity);
+        newObj.transform.localScale = new Vector3(1, 1, 1);
+        newObj.AddComponent<Interactable>();
+        newObj.AddComponent<Throwable>();
     }
     void resetEverything()
     {
@@ -388,6 +403,51 @@ public class Spawn_nodes : MonoBehaviour
                     Debug.Log(sizePercentage + " = " + nodes[i].GetComponent<ChildNode>().getSize() + " - " + smallestSize + " / " + biggestSize + " - " + smallestSize);
                     float nodeSize = 1f + (2f * sizePercentage);
                     nodes[i].transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+                    float theWeight = (float)nodes[i].GetComponent<ChildNode>().getWeight();
+                    if(theWeight == 0)
+                    {
+                        //do nothing
+                    }
+                    else if (theWeight < 0.1f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f/255f, 170f/255f, 0f/255f); 
+                    }
+                    else if (theWeight < 0.2f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(0f / 255f, 102f / 255f, 51f / 255f);
+                    }
+                    else if (theWeight < 0.3f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 255f / 255f, 0f / 255f);
+                    }
+                    else if (theWeight < 0.4f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(0f / 255f, 0f / 255f, 255f / 255f);
+                    }
+                    else if (theWeight < 0.5f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 0f / 255f, 255f / 255f);
+                    }
+                    else if (theWeight < 0.6f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(96f / 255f, 96f / 255f, 96f / 255f);
+                    }
+                    else if (theWeight < 0.7f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 0f / 255f, 0f / 255f);
+                    }
+                    else if (theWeight < 0.8f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(0f / 255f, 255f / 255f, 0f / 255f);
+                    }
+                    else if (theWeight < 0.9f)
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 204f / 255f, 255f / 255f);
+                    }
+                    else
+                    {
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 255 / 255f, 255f / 255f);
+                    }
                 }
                 if(i == 0)
                 {
