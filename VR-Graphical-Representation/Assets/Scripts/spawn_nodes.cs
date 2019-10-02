@@ -91,7 +91,7 @@ public class Spawn_nodes : MonoBehaviour
         }
     }*/
 
-    void chooseNode(GameObject chosenNode)
+    public void chooseNode(GameObject chosenNode)
     {
         //kolla om barnen till noden inte har barn, om do inte har det måste if i create children ändras till att kunna visa alla noder!
         if (chosenNode.GetComponent<ChildNode>().jsonData.children.Count != 0)
@@ -119,7 +119,7 @@ public class Spawn_nodes : MonoBehaviour
         }
         else
         {
-
+            createPhysicalObject(chosenNode);
         }
         Debug.Log(smallestSize);
         Debug.Log(biggestSize);

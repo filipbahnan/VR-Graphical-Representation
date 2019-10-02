@@ -3,63 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-/*
-public class Node : MonoBehaviour
-{
-    private bool isNodeAbstract ;
-    public List<GameObject> children;
-    private int amountOfChildren = 0;
-    private string state;
-    private string color = "red";
-    private int size;
-    private double weight;
-
-    public string getColor()
-    {
-        return color;
-    }
-
-    public string getState()
-    {
-        return state;
-    }
-    public void setisNodeAbstract(string state)
-    {
-        this.state = state;
-    }
-
-    public int getSize()
-    {
-        return size;
-    }
-    public void setSize(int size)
-    {
-        this.size = size;
-    }
-
-    public double getWeight()
-    {
-        return weight;
-    }
-    public void setWeight(double weight)
-    {
-        this.weight = weight;
-    }
-}*/
-
-/*
-public class Node
-{
-    public string @class { get; set; }
-    public string parent { get; set; }
-    public string @abstract { get; set; }
-}
-
-public class RootObject
-{
-    public List<Node> jsonNodes { get; set; }
-}*/
-
 public class RootNode : MonoBehaviour
 {
     private string rootName;
