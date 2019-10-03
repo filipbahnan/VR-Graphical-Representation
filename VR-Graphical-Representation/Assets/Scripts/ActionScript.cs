@@ -11,18 +11,24 @@ public class ActionScript : MonoBehaviour
     // a reference to the action
     public SteamVR_Action_Boolean clickNodeOnOff;
     public SteamVR_Action_Boolean resetOnOff;
+    public SteamVR_Action_Vector2 rotateNodes;
     // a reference to the hand
     public SteamVR_Input_Sources rightController;
     public SteamVR_Input_Sources leftController;
+
+
 
     void Start()
     {
         clickNodeOnOff.AddOnStateDownListener(TriggerDown, rightController);
         clickNodeOnOff.AddOnStateUpListener(TriggerUp, rightController);
 
+        rotateNodes.AddOnAxisListener(TouchTouchPad, rightController);
+
         resetOnOff.AddOnStateDownListener(resetDown, leftController);
 
     }
+
     public void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
         Debug.Log("Trigger is up");
@@ -35,11 +41,27 @@ public class ActionScript : MonoBehaviour
 
     public void resetDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
-        Debug.Log("Keeeeeeeeeeeeeeeeeeeeeeeevin");
         GameObject spawner = GameObject.Find("Spawner");
         spawner.GetComponent<Spawn_nodes>().reset();
         /*
         GameObject spawner = GameObject.Find("Spawner");
         spawner.GetComponent<Spawn_nodes>().*/
+    }
+
+    //public void TouchTouchPad(SteamVR_Action_Vector2 fromAction, SteamVR_Input_Sources fromSource)
+    //{
+    //    Debug.Log("fungerar det???");
+    //    GameObject center = GameObject.Find("center(Clone)");
+    //    Vector3 theRotaion = new Vector3(fromAction.delta.x, fromAction.delta.y, 0);
+    //    center.transform.Rotate(theRotaion);
+    //}
+
+
+    private void TouchTouchPad(SteamVR_Action_Vector2 fromAction, SteamVR_Input_Sources fromSource, Vector2 theAxis, Vector2 theDelta)
+    {
+        Debug.Log("fungerar det???");
+        GameObject center = GameObject.Find("center(Clone)");
+        Vector3 theRotaion = new Vector3(theAxis.x, theAxis.y, 0);
+        center.transform.Rotate(theRotaion);
     }
 }

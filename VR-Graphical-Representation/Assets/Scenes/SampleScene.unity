@@ -602,7 +602,14 @@ MonoBehaviour:
   clickNodeOnOff:
     actionPath: /actions/default/in/ClickNode
     needsReinit: 0
-  handType: 2
+  resetOnOff:
+    actionPath: /actions/default/in/Reset
+    needsReinit: 0
+  rotateNodes:
+    actionPath: /actions/default/in/rotate
+    needsReinit: 0
+  rightController: 2
+  leftController: 1
 --- !u!4 &1552733905
 Transform:
   m_ObjectHideFlags: 0
