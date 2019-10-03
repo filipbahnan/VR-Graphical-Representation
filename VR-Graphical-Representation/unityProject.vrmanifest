@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vrgraphicalrepresentation.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\admin\\Documents\\GitHub\\VR-Graphical-Representation\\VR-Graphical-Representation\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VR-Graphical-Representation [Testing]"
+        }
+      }
+    }
+  ]
+}

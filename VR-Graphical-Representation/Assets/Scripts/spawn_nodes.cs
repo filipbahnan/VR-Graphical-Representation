@@ -49,12 +49,12 @@ public class Spawn_nodes : MonoBehaviour
         Debug.Log(nodes.Count);
 
     }
-
+    /*
     private void Update()
     {
         chooseNode(chosenNode);
     }
-
+    */
     public void read()
     {
         string filename = "hib_hotspot_proto.json";
@@ -132,9 +132,10 @@ public class Spawn_nodes : MonoBehaviour
         Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 10, player.transform.position.z);
         Debug.Log(playerPosition);
         GameObject newObj = Instantiate(chosenNode, playerPosition, Quaternion.identity);
-        newObj.transform.localScale = new Vector3(1, 1, 1);
-        newObj.AddComponent<Interactable>();
-        newObj.AddComponent<Throwable>();
+        newObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        newObj.GetComponent<Rigidbody>().useGravity = true;
+        //newObj.AddComponent<Interactable>();
+        //newObj.AddComponent<Throwable>();
     }
     void resetEverything()
     {
@@ -562,6 +563,7 @@ void spawnLines()
         teleportPlatform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
         teleportPlatform.AddComponent<MeshCollider>();
         teleportPlatform.AddComponent<Valve.VR.InteractionSystem.TeleportArea>();
+        teleportPlatform.GetComponent<MeshRenderer>().enabled = false;
     }
 
     void setSpawnPosition()
