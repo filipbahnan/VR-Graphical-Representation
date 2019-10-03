@@ -9,12 +9,10 @@ public class LaserInput : MonoBehaviour
 {
 
     public static GameObject currentObject;
-    private int currentID;
     // Start is called before the first frame update
     void Start()
     {
         currentObject = null;
-        currentID = 0;
     }
 
     // Update is called once per frame

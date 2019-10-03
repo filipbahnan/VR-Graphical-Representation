@@ -45,6 +45,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/Reset",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

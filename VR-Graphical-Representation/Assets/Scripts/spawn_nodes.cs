@@ -34,6 +34,7 @@ public class Spawn_nodes : MonoBehaviour
     private float smallestSize = 0;
     private float biggestSize = 0;
     private Child previousNode;
+    private RootObject myJsonObject;
 
 
     // Start is called before the first frame update
@@ -47,7 +48,6 @@ public class Spawn_nodes : MonoBehaviour
         spawnPlatform();
         setSpawnPosition();
         Debug.Log(nodes.Count);
-
     }
     /*
     private void Update()
@@ -59,7 +59,7 @@ public class Spawn_nodes : MonoBehaviour
     {
         string filename = "hib_hotspot_proto.json";
         jsonString = File.ReadAllText(Application.dataPath + "/Resources/" + filename);
-        RootObject myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
+        myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
         Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         GameObject theRoot = Instantiate(prefab, spawnPosition, Quaternion.identity);
         theRoot.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
@@ -156,7 +156,38 @@ public class Spawn_nodes : MonoBehaviour
         Destroy(platform);
         Destroy(teleportPlatform);
     }
-    
+
+    public void reset()
+    {
+        resetEverything();
+        destroyObjects();
+        Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
+        GameObject theRoot = Instantiate(prefab, spawnPosition, Quaternion.identity);
+        theRoot.transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+        TextMesh[] textObject = theRoot.GetComponentsInChildren<TextMesh>();
+        for (int i = 0; i < 6; i++)
+            textObject[i].text = myJsonObject.name;
+
+        for (int i = 6; i < 18; i++)
+            textObject[i].text = "";
+        theRoot.AddComponent<RootNode>();
+        theRoot.GetComponent<RootNode>().setRootName(myJsonObject.name);
+        nodes.Add(theRoot);
+        for (int i = 0; i < myJsonObject.children.Count; i++)
+        {
+            //setId(myJsonObject.children[i]);
+            int depthLimit = 0;
+            int currentDepth = 0;
+            theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth));
+        }
+        setNodes();
+        positionNodes();
+        spawnLines();
+        setCenter();
+        spawnPlatform();
+        setSpawnPosition();
+    }
+
     GameObject createChildren(Child theNodeData, int depthLimit, int currentDepth)
     {   
         currentDepth++;
