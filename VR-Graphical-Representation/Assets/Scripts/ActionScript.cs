@@ -34,6 +34,17 @@ public class ActionScript : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            var anotherPath = StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false);
+            GameObject spawner = GameObject.Find("Spawner");
+            spawner.GetComponent<Spawn_nodes>().thePath = anotherPath[0];
+            spawner.GetComponent<Spawn_nodes>().startFunction();
+        }
+    }
+
     public void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
         Debug.Log("Trigger is up");
