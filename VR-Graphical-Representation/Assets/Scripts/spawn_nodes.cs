@@ -35,11 +35,17 @@ public class Spawn_nodes : MonoBehaviour
     private float biggestSize = 0;
     private Child previousNode;
     private RootObject myJsonObject;
-
+    public string thePath;
+    private bool firstRead = true;
 
     // Start is called before the first frame update
-    void Start()
+    public void startFunction()
     {
+        if (firstRead == false)
+        {
+            resetEverything();
+            destroyObjects();
+        }
         read();
         setNodes();
         positionNodes();
@@ -47,7 +53,7 @@ public class Spawn_nodes : MonoBehaviour
         setCenter();
         spawnPlatform();
         setSpawnPosition();
-        Debug.Log(nodes.Count);
+        firstRead = false;
     }
     /*
     private void Update()
@@ -57,8 +63,7 @@ public class Spawn_nodes : MonoBehaviour
     */
     public void read()
     {
-        string filename = "hib_hotspot_proto.json";
-        jsonString = File.ReadAllText(Application.dataPath + "/Resources/" + filename);
+        jsonString = File.ReadAllText(thePath);
         myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
         Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
         GameObject theRoot = Instantiate(prefab, spawnPosition, Quaternion.identity);

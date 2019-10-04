@@ -556,6 +556,7 @@ MonoBehaviour:
   rootMaterial: {fileID: 2100000, guid: da2ab95597e69544e88876bb92e56261, type: 2}
   spacing: 4
   chosenNode: {fileID: 0}
+  thePath: 
 --- !u!4 &858357959
 Transform:
   m_ObjectHideFlags: 0
@@ -604,6 +605,9 @@ MonoBehaviour:
     needsReinit: 0
   resetOnOff:
     actionPath: /actions/default/in/Reset
+    needsReinit: 0
+  fileExplorerOnOFf:
+    actionPath: /actions/default/in/openFileExplorer
     needsReinit: 0
   rotateNodes:
     actionPath: /actions/default/in/rotate
