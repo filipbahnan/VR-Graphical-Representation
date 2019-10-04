@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Valve.VR;
-using SimpleFileBrowser;
+using SFB;
+
 public class ActionScript : MonoBehaviour
 {
 
@@ -33,16 +34,6 @@ public class ActionScript : MonoBehaviour
 
     }
 
-    IEnumerator ShowLoadDialogCoroutine()
-    {
-        // Show a load file dialog and wait for a response from user
-        // Load file/folder: file, Initial path: default (Documents), Title: "Load File", submit button text: "Load"
-        yield return FileBrowser.WaitForLoadDialog(false, null, "Load File", "Load");
-        GameObject spawner = GameObject.Find("Spawner");
-        spawner.GetComponent<Spawn_nodes>().thePath = FileBrowser.Result;
-        spawner.GetComponent<Spawn_nodes>().startFunction();
-    }
-
     public void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
         Debug.Log("Trigger is up");
@@ -61,9 +52,10 @@ public class ActionScript : MonoBehaviour
     }
     public void fileDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
-        FileBrowser.SetDefaultFilter("json");
-        FileBrowser.AddQuickLink("Users", "C:\\Users", null);
-        StartCoroutine(ShowLoadDialogCoroutine());
+        var anotherPath = StandaloneFileBrowser.OpenFilePanel("Open File", "", "", false);
+        GameObject spawner = GameObject.Find("Spawner");
+        spawner.GetComponent<Spawn_nodes>().thePath = anotherPath[0];
+        spawner.GetComponent<Spawn_nodes>().startFunction();
     }
 
     private void TouchTouchPad(SteamVR_Action_Vector2 fromAction, SteamVR_Input_Sources fromSource, Vector2 theAxis, Vector2 theDelta)
