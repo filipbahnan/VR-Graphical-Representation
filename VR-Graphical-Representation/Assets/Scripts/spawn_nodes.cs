@@ -37,6 +37,7 @@ public class Spawn_nodes : MonoBehaviour
     private RootObject myJsonObject;
     public string thePath;
     private bool firstRead = true;
+    private Child currentRoot;
 
     // Start is called before the first frame update
     public void startFunction()
@@ -58,6 +59,7 @@ public class Spawn_nodes : MonoBehaviour
 
     public void read()
     {
+        currentRoot = null;
         jsonString = File.ReadAllText(thePath);
         myJsonObject = JsonConvert.DeserializeObject<RootObject>(jsonString);
         Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
@@ -106,6 +108,7 @@ public class Spawn_nodes : MonoBehaviour
             {
                 limit = 2;
             }
+            currentRoot = chosenNode.GetComponent<ChildNode>().jsonData;
             createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth);
             destroyObjects();
             setNodes();
@@ -146,7 +149,8 @@ public class Spawn_nodes : MonoBehaviour
         platformSize = 14f;
         smallestSize = 0;
         biggestSize = 0;
-}
+        currentRoot = null;
+    }
     void destroyObjects()
     {
         Destroy(centerObject);
@@ -283,9 +287,12 @@ public class Spawn_nodes : MonoBehaviour
         }
         if (currentDepth <= depthLimit)
         {
-            for (int i = 0; i < theNodeData.children.Count; i++)
+            if (currentRoot == theNodeData || theNodeData.children.Count < 28 ||currentRoot == null)
             {
-                theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i],depthLimit, currentDepth));
+                for (int i = 0; i < theNodeData.children.Count; i++)
+                {
+                    theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i], depthLimit, currentDepth));
+                }
             }
         }
         return theChild;
@@ -449,7 +456,8 @@ public class Spawn_nodes : MonoBehaviour
     void setNodes()
     {
         for (int i = 0; i < nodes.Count; i++)
-        {   if(nodes[i].GetComponent<ChildNode>() != null)
+        {
+            if (nodes[i].GetComponent<ChildNode>() != null)
             {
                 if (nodes[i].GetComponent<ChildNode>().getHasChildren() == false)
                 {
@@ -459,13 +467,13 @@ public class Spawn_nodes : MonoBehaviour
                     float nodeSize = 1f + (2f * sizePercentage);
                     nodes[i].transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
                     float theWeight = (float)nodes[i].GetComponent<ChildNode>().getWeight();
-                    if(theWeight == 0)
+                    if (theWeight == 0)
                     {
                         //do nothing
                     }
                     else if (theWeight < 0.1f)
                     {
-                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f/255f, 170f/255f, 0f/255f); 
+                        nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 170f / 255f, 0f / 255f);
                     }
                     else if (theWeight < 0.2f)
                     {
@@ -504,7 +512,7 @@ public class Spawn_nodes : MonoBehaviour
                         nodes[i].GetComponent<Renderer>().material.color = new Color(255f / 255f, 255 / 255f, 255f / 255f);
                     }
                 }
-                if(i == 0)
+                if (i == 0)
                 {
                     nodes[i].GetComponent<Renderer>().material = rootMaterial;
                 }
@@ -518,9 +526,10 @@ public class Spawn_nodes : MonoBehaviour
         {
             nodes.Sort((a, b) => b.GetComponent<ChildNode>().children.Count.CompareTo(a.GetComponent<ChildNode>().children.Count));
         }
-}
+    
+    }
 
-void spawnLines()
+    void spawnLines()
     {
         for (int i = 0; i < nodes.Count; i++)
         {   
