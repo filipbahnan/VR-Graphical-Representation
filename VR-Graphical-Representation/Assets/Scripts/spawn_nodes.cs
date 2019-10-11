@@ -619,12 +619,10 @@ public class Spawn_nodes : MonoBehaviour
         }
         platform = Instantiate(platformPrefab, middle, Quaternion.identity);
         platform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
-        platform.AddComponent<MeshCollider>();
 
         Vector3 teleportOffset = new Vector3(middle.x, middle.y + 0.06f, middle.z);
         teleportPlatform = Instantiate(platformPrefab, teleportOffset, Quaternion.identity);
         teleportPlatform.transform.localScale = new Vector3(platformSize, platformSize, platformSize);
-        teleportPlatform.AddComponent<MeshCollider>();
         teleportPlatform.AddComponent<Valve.VR.InteractionSystem.TeleportArea>();
         teleportPlatform.GetComponent<MeshRenderer>().enabled = false;
     }
