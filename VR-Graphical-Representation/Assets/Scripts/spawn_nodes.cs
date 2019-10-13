@@ -39,7 +39,6 @@ public class Spawn_nodes : MonoBehaviour
     private bool firstRead = true;
     private Child currentRoot;
 
-    // Start is called before the first frame update
     public void startFunction()
     {
         if (firstRead == false)
@@ -79,7 +78,7 @@ public class Spawn_nodes : MonoBehaviour
             //setId(myJsonObject.children[i]);
             int depthLimit = 0;
             int currentDepth = 0;
-            theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth));
+            theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth, "standard"));
         }
     }
     /*
@@ -109,7 +108,7 @@ public class Spawn_nodes : MonoBehaviour
                 limit = 2;
             }
             currentRoot = chosenNode.GetComponent<ChildNode>().jsonData;
-            createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth);
+            createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth, "standard");
             destroyObjects();
             setNodes();
             positionNodes();
@@ -158,7 +157,7 @@ public class Spawn_nodes : MonoBehaviour
         Destroy(teleportPlatform);
     }
 
-    public void reset()
+    public void reset(string type)
     {
         resetEverything();
         destroyObjects();
@@ -169,17 +168,35 @@ public class Spawn_nodes : MonoBehaviour
         for (int i = 0; i < 6; i++)
             textObject[i].text = myJsonObject.name;
 
-        for (int i = 6; i < 18; i++)
+        for (int i = 6; i < 24; i++)
             textObject[i].text = "";
         theRoot.AddComponent<RootNode>();
         theRoot.GetComponent<RootNode>().setRootName(myJsonObject.name);
         nodes.Add(theRoot);
+        int depthLimit;
+        int currentDepth = 0;
+        if (type != "overview")
+        {
+            depthLimit = 0;
+        }
+        else 
+        {
+            depthLimit = int.MaxValue;
+        }
         for (int i = 0; i < myJsonObject.children.Count; i++)
         {
-            //setId(myJsonObject.children[i]);
-            int depthLimit = 0;
-            int currentDepth = 0;
-            theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth));
+            if (type == "standard")
+            {
+                theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth, type));
+            }
+            else
+            {
+                if (myJsonObject.children[i].children.Count > 0)
+                {
+                    theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth, type));
+                }
+            }
+            //theRoot.GetComponent<RootNode>().children.Add(createChildren(myJsonObject.children[i], depthLimit, currentDepth, type));
         }
         setNodes();
         positionNodes();
@@ -189,7 +206,7 @@ public class Spawn_nodes : MonoBehaviour
         setSpawnPosition();
     }
 
-    GameObject createChildren(Child theNodeData, int depthLimit, int currentDepth)
+    GameObject createChildren(Child theNodeData, int depthLimit, int currentDepth, string type)
     {   
         currentDepth++;
         Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f));
@@ -291,7 +308,17 @@ public class Spawn_nodes : MonoBehaviour
             {
                 for (int i = 0; i < theNodeData.children.Count; i++)
                 {
-                    theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i], depthLimit, currentDepth));
+                    if (type == "standard")
+                    {
+                        theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i], depthLimit, currentDepth, type));
+                    }
+                    else
+                    {
+                        if (theNodeData.children[i].children.Count > 0)
+                        {
+                            theChild.GetComponent<ChildNode>().children.Add(createChildren(theNodeData.children[i], depthLimit, currentDepth, type));
+                        }
+                    }
                 }
             }
         }

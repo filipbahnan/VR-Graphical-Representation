@@ -43,6 +43,11 @@ public class ActionScript : MonoBehaviour
             spawner.GetComponent<Spawn_nodes>().thePath = anotherPath[0];
             spawner.GetComponent<Spawn_nodes>().startFunction();
         }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            GameObject spawner = GameObject.Find("Spawner");
+            spawner.GetComponent<Spawn_nodes>().reset("overview");
+        }
     }
 
     public void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
@@ -58,7 +63,7 @@ public class ActionScript : MonoBehaviour
     public void resetDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
     {
         GameObject spawner = GameObject.Find("Spawner");
-        spawner.GetComponent<Spawn_nodes>().reset();
+        spawner.GetComponent<Spawn_nodes>().reset("standard");
 
     }
     public void fileDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
