@@ -46,6 +46,10 @@ public class Spawn_nodes : MonoBehaviour
             resetEverything();
             destroyObjects();
         }
+        else
+        {
+            Destroy(GameObject.Find("Spawn Platform"));
+        }
         read();
         setNodes();
         positionNodes();
@@ -132,6 +136,7 @@ public class Spawn_nodes : MonoBehaviour
         Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 10, player.transform.position.z);
         GameObject newObj = Instantiate(chosenNode, playerPosition, Quaternion.identity);
         newObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        newObj.GetComponent<Rigidbody>().isKinematic = true;
         newObj.GetComponent<Rigidbody>().useGravity = true;
         //newObj.AddComponent<Interactable>();
         //newObj.AddComponent<Throwable>();
@@ -217,18 +222,18 @@ public class Spawn_nodes : MonoBehaviour
         string firstText = "";
         for (int i = 0; i < 6; i++)
         {
-            if (theNodeData.name.Length < 20)
+            if (theNodeData.name.Length < 19)
             {
                 textObject[i].text = theNodeData.name;
             }
             else
             {
-                for(int x = 0; x < 19; x++)
+                for(int x = 0; x < 18; x++)
                 {
                     firstText += theNodeData.name[x];
                 }
                 firstText += "-";
-                for(int x = 19; x < theNodeData.name.Length; x++)
+                for(int x = 18; x < theNodeData.name.Length; x++)
                 {
                     secondText += theNodeData.name[x];
                 }
