@@ -38,6 +38,7 @@ public class Spawn_nodes : MonoBehaviour
     public string thePath;
     private bool firstRead = true;
     private Child currentRoot;
+    public int chosenLimit = 2;
 
     public void startFunction()
     {
@@ -109,7 +110,7 @@ public class Spawn_nodes : MonoBehaviour
             }
             else
             {
-                limit = 2;
+                limit = chosenLimit;
             }
             currentRoot = chosenNode.GetComponent<ChildNode>().jsonData;
             createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth, "standard");
@@ -275,6 +276,7 @@ public class Spawn_nodes : MonoBehaviour
                 textObject[i].text = theNodeData.weight.ToString();
             }
         }
+        
         theChild.AddComponent<ChildNode>();
         theChild.GetComponent<ChildNode>().depth = currentDepth;
         theChild.GetComponent<ChildNode>().setNodeName(theNodeData.name);
@@ -326,6 +328,10 @@ public class Spawn_nodes : MonoBehaviour
                     }
                 }
             }
+        }
+        if(currentRoot != theNodeData && theNodeData.children.Count >= 28)
+        {
+            theChild.GetComponent<Renderer>().material.color = Color.red;
         }
         return theChild;
     }
@@ -560,11 +566,10 @@ public class Spawn_nodes : MonoBehaviour
                 nodes[i].GetComponent<Renderer>().material = rootMaterial;
             }
         }
-        if (nodes[0].GetComponent<ChildNode>() != null)
-        {
-            nodes.Sort((a, b) => b.GetComponent<ChildNode>().children.Count.CompareTo(a.GetComponent<ChildNode>().children.Count));
-        }
-    
+        GameObject tempObj = nodes[0];
+        nodes.RemoveAt(0);
+        nodes.Sort((a, b) => b.GetComponent<ChildNode>().children.Count.CompareTo(a.GetComponent<ChildNode>().children.Count));
+        nodes.Insert(0, tempObj);
     }
 
     void spawnLines()
@@ -576,9 +581,14 @@ public class Spawn_nodes : MonoBehaviour
                 for (int x = 0; x < nodes[i].GetComponent<RootNode>().children.Count; x++)
                 {
                     GameObject lineObj = new GameObject();
+                    lineObj.layer = 9;
                     lineObj.transform.position = nodes[i].transform.position;
                     LineRenderer relation = lineObj.AddComponent<LineRenderer>();
-                    relation.material = new Material(Shader.Find("Sprites/Default"));
+                    relation.material = new Material(Shader.Find("Particles/Standard Unlit"));
+                    relation.receiveShadows = false;
+                    relation.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    relation.allowOcclusionWhenDynamic = false;
+                    relation.sortingOrder = 10;
                     Vector3[] positions = new Vector3[2];
                     positions[0] = new Vector3(0, 0, 0);
                     positions[1] = nodes[i].GetComponent<RootNode>().children[x].transform.position;
@@ -597,9 +607,14 @@ public class Spawn_nodes : MonoBehaviour
                 for (int x = 0; x < nodes[i].GetComponent<ChildNode>().children.Count; x++)
                 {
                     GameObject lineObj = new GameObject();
+                    lineObj.layer = 9;
                     lineObj.transform.position = nodes[i].transform.position;
                     LineRenderer relation = lineObj.AddComponent<LineRenderer>();
-                    relation.material = new Material(Shader.Find("Sprites/Default"));
+                    relation.material = new Material(Shader.Find("Particles/Standard Unlit"));
+                    relation.receiveShadows = false;
+                    relation.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    relation.allowOcclusionWhenDynamic = false;
+                    relation.sortingOrder = 10;
                     Vector3[] positions = new Vector3[2];
                     positions[0] = new Vector3(0, 0, 0);
                     positions[1] = nodes[i].GetComponent<ChildNode>().children[x].transform.position;
