@@ -494,10 +494,16 @@ public class Spawn_nodes : MonoBehaviour
                 if (nodes[i].GetComponent<ChildNode>().getHasChildren() == false)
                 {
                     nodes[i].GetComponent<Renderer>().material = noChildrenMaterial;
-
-                    float sizePercentage = (nodes[i].GetComponent<ChildNode>().getSize() - smallestSize) / (biggestSize - smallestSize);
-                    float nodeSize = 1f + (2f * sizePercentage);
-                    nodes[i].transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+                    if (biggestSize - smallestSize != 0)
+                    {
+                        float sizePercentage = (nodes[i].GetComponent<ChildNode>().getSize() - smallestSize) / (biggestSize - smallestSize);
+                        float nodeSize = 1f + (2f * sizePercentage);
+                        nodes[i].transform.localScale = new Vector3(nodeSize, nodeSize, nodeSize);
+                    }
+                    else
+                    {
+                        nodes[i].transform.localScale = new Vector3(3, 3, 3);
+                    }
                     float theWeight = (float)nodes[i].GetComponent<ChildNode>().getWeight();
                     if (theWeight == 0)
                     {

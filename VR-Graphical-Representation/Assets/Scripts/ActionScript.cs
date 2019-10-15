@@ -18,6 +18,7 @@ public class ActionScript : MonoBehaviour
     public SteamVR_Input_Sources rightController;
     public SteamVR_Input_Sources leftController;
     private static string thePath;
+    private bool currentModeIsOverView = false;
 
 
 
@@ -45,8 +46,19 @@ public class ActionScript : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.R))
         {
-            GameObject spawner = GameObject.Find("Spawner");
-            spawner.GetComponent<Spawn_nodes>().reset("overview");
+            if (currentModeIsOverView == false)
+            {
+                GameObject spawner = GameObject.Find("Spawner");
+                spawner.GetComponent<Spawn_nodes>().reset("overview");
+                currentModeIsOverView = true;
+            }
+            else
+            {
+                GameObject spawner = GameObject.Find("Spawner");
+                spawner.GetComponent<Spawn_nodes>().reset("standard");
+                currentModeIsOverView = false;
+            }
+
         }
     }
 
