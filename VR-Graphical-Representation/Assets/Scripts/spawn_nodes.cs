@@ -111,8 +111,6 @@ public class Spawn_nodes : MonoBehaviour
             else
             {
                 limit = chosenLimit;
-                Debug.Log(chosenLimit);
-
             }
             currentRoot = chosenNode.GetComponent<ChildNode>().jsonData;
             createChildren(chosenNode.GetComponent<ChildNode>().jsonData, chosenNode.GetComponent<ChildNode>().depth + limit, chosenNode.GetComponent<ChildNode>().depth, "standard");
@@ -139,6 +137,7 @@ public class Spawn_nodes : MonoBehaviour
         Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 10, player.transform.position.z);
         GameObject newObj = Instantiate(chosenNode, playerPosition, Quaternion.identity);
         newObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        newObj.GetComponent<Rigidbody>().isKinematic = true;
         newObj.GetComponent<Rigidbody>().useGravity = true;
         //newObj.AddComponent<Interactable>();
         //newObj.AddComponent<Throwable>();
@@ -585,7 +584,9 @@ public class Spawn_nodes : MonoBehaviour
                     lineObj.layer = 9;
                     lineObj.transform.position = nodes[i].transform.position;
                     LineRenderer relation = lineObj.AddComponent<LineRenderer>();
+
                     relation.material = new Material(Shader.Find("Sprites/Default"));
+
                     relation.receiveShadows = false;
                     relation.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                     relation.allowOcclusionWhenDynamic = false;
@@ -612,6 +613,7 @@ public class Spawn_nodes : MonoBehaviour
                     lineObj.transform.position = nodes[i].transform.position;
                     LineRenderer relation = lineObj.AddComponent<LineRenderer>();
                     relation.material = new Material(Shader.Find("Sprites/Default"));
+
                     relation.receiveShadows = false;
                     relation.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                     relation.allowOcclusionWhenDynamic = false;
