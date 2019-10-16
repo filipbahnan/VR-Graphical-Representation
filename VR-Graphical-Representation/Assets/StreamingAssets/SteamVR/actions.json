@@ -57,6 +57,18 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/modeSwitch",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/4Layer",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/2Layer",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
