@@ -137,7 +137,7 @@ public class Spawn_nodes : MonoBehaviour
         Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 10, player.transform.position.z);
         GameObject newObj = Instantiate(chosenNode, playerPosition, Quaternion.identity);
         newObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        newObj.GetComponent<Rigidbody>().isKinematic = true;
+        newObj.GetComponent<Rigidbody>().isKinematic = false;
         newObj.GetComponent<Rigidbody>().useGravity = true;
         //newObj.AddComponent<Interactable>();
         //newObj.AddComponent<Throwable>();
